@@ -1,0 +1,87 @@
+/* Page container */
+.landing-container {
+  min-height: 100vh;
+  display: flex;
+  /* flex-direction:row; */
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #f9fafb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Title */
+.landing-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* Subtitle */
+.landing-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* Grid */
+.role-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Card */
+.role-card {
+  width: 260px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+.role-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* Card title */
+.role-card h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+/* Card description */
+.role-card p {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .landing-title {
+    font-size: 1.8rem;
+  }
+
+  .role-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}

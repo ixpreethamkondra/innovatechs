@@ -1,37 +1,39 @@
 import { useNavigate } from "react-router-dom";
-// import "../App.css";
+import "../css/FirstPage.css";
 
 function FirstPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="app-container">
-      <h1>Hello People</h1>
+    <div className="landing-container">
+      <h1 className="landing-title">Welcome to JobConnect</h1>
+      <p className="landing-subtitle">
+        A platform where companies post jobs and candidates apply with ease.
+      </p>
 
-      <div className="image-grid">
+      <div className="role-grid">
         <div
-        style={{
-            display:"flex",gap:"50px",marginTop:"100px"
-        }}>
+          className="role-card"
+          onClick={() => navigate("/company-login")}
+        >
           <img
             src="https://media.istockphoto.com/id/1696781145/photo/modern-building-in-the-city-with-blue-sky.jpg?s=612x612&w=0&k=20&c=POfayTyDe06tGX4CeJgS8-fb896MUC46dl3ZbHXBqN4="
-            className="img"
-            onClick={() => navigate("/company-login")}
-            style={{ cursor: "pointer",
-                
-             }}
+            alt="Company"
           />
-          <>Company</>
+          <h3>Company</h3>
+          <p>Post jobs and manage applications</p>
         </div>
 
-        <div>
+        <div
+          className="role-card"
+          onClick={() => navigate("/user-login")}
+        >
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrIfMx7WH_mKywvWyKfkHPlCNMGGdGS1Mew&s"
-            className="img"
-            onClick={() => navigate("/user-login")}
-            style={{ cursor: "pointer" }}
+            alt="User"
           />
-          <>Users</>
+          <h3>Job Seeker</h3>
+          <p>Apply for jobs</p>
         </div>
       </div>
     </div>
